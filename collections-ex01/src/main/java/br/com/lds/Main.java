@@ -13,14 +13,22 @@ public class Main {
 	}
 
 	private Scanner scanner = new Scanner(System.in);
+	private final String RETORNO_INVALIDO = "INVALIDO";
 
 	private void start() {
+
+		if (valorDigitado == RETORNO_INVALIDO) {
+
+		}
 
 	}
 
 	private String obterDados() {
 		try {
 			System.out.println("Digite o valor: ");
+
+			int valor = scanner.nextInt();
+			return String.valueOf(valor);
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
