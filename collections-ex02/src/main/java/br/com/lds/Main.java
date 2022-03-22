@@ -21,14 +21,25 @@ public class Main {
 
 		exbirValorDoMapaPelaChave("SRS");
 		exbirValorDoMapaPelaChave("MG");
+
+		mapa.put("SRS", "Santa Rita");
+
+		iterarMapa();
 	}
 
 	private void adicionarItensNoMapa() {
-		mapa.put("SRS", "Santa Rita do Sapucaí");
-		mapa.put("PA", "Pouso Alegre");
-		mapa.put("ITA", "Itajuba");
-		mapa.put("ZORO", "Conceicao dos ouros");
-		mapa.put("CAXU", "Cachoeira de Minas");
+
+		try {
+
+			mapa.put("SRS", "Santa Rita do Sapucaí");
+			mapa.put("PA", "Pouso Alegre");
+			mapa.put("ITA", "Itajuba");
+			mapa.put("ZORO", "Conceicao dos ouros");
+			mapa.put("CAXU", "Cachoeira de Minas");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+
+		}
 	}
 
 	private void iterarMapa() {
