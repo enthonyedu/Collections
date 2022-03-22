@@ -62,7 +62,7 @@ public class Main {
 
 	private String obterDados() {
 		try {
-			System.out.println("Digite o valor: ");
+			System.out.print("Digite o valor: ");
 
 			int valor = scanner.nextInt();
 			return String.valueOf(valor);
