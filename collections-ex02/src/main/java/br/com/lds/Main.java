@@ -19,6 +19,8 @@ public class Main {
 		adicionarItensNoMapa();
 		iterarMapa();
 
+		exbirValorDoMapaPelaChave("SRS");
+		exbirValorDoMapaPelaChave("MG");
 	}
 
 	private void adicionarItensNoMapa() {
@@ -35,6 +37,25 @@ public class Main {
 			System.out.println("Chave: " + chave + "| Valor: " + valor);
 
 		}
+	}
+
+	private void exbirValorDoMapaPelaChave(String chave) {
+		try {
+
+			if (mapa.containsKey(chave)) {
+				System.out.println("Valor: " + chave);
+
+			} else {
+				System.out.println("Chave " + chave + " não existe.");
+			}
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println("Ocorreu um erro");
+		} finally {
+			System.out.println("-------------");
+		}
+
 	}
 
 }
