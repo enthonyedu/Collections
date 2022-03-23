@@ -3,6 +3,7 @@ package br.com.lds;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.lds.models.Animal;
 import br.com.lds.models.Cachorro;
 import br.com.lds.models.Gato;
 
@@ -17,41 +18,49 @@ public class Main {
 
 	private void start() {
 
+		List<Animal> animais = new ArrayList<Animal>();
+
 		Cachorro primeiroCachorro = new Cachorro("Tiburssinho");
 		Cachorro segundoCachorro = new Cachorro("Aroldo");
 
 		primeiroCachorro.setCor("azul");
 
-		List<Cachorro> cachorros = new ArrayList<Cachorro>();
-		cachorros.add(primeiroCachorro);
-		cachorros.add(segundoCachorro);
-
-		for (Cachorro cachorro : cachorros) {
-
-			cachorro.som();
-			cachorro.dizerMeuNome();
-			cachorro.dizerMinhaIdade();
-			cachorro.oQueGostoDeFazer();
-
-			System.out.println("Cor do cachorro: " + cachorro.getCor());
-			System.out.println("-----");
-		}
+		animais.add(primeiroCachorro);
+		animais.add(segundoCachorro);
 
 		Gato primeiroGato = new Gato();
 		Gato segundoGato = new Gato("Verde");
 
-		List<Gato> gatos = new ArrayList<Gato>();
-		gatos.add(primeiroGato);
-		gatos.add(segundoGato);
+		animais.add(primeiroGato);
+		animais.add(segundoGato);
 
-		for (Gato gato : gatos) {
-			gato.som();
-			gato.dizerMeuNome();
-			gato.dizerMinhaIdade();
-			gato.oQueEuFacoDuranteANoite();
+		for (Animal animal : animais) {
 
-			System.out.println("Cor do gato: " + gato.getCor());
-			System.out.println("-----");
+			if (animal instanceof Cachorro) {
+
+				Cachorro cachorro = (Cachorro) animal;
+				cachorro.som();
+				cachorro.dizerMeuNome();
+				cachorro.dizerMinhaIdade();
+				cachorro.oQueGostoDeFazer();
+
+				System.out.println("Cor do cachorro: " + cachorro.getCor());
+				System.out.println("----");
+
+			} else if (animal instanceof Gato) {
+
+				Gato gato = (Gato) animal;
+				gato.som();
+				gato.dizerMeuNome();
+				gato.dizerMinhaIdade();
+				gato.oQueEuFacoDuranteANoite();
+
+				System.out.println("Cor do gato: " + gato.getCor());
+				System.out.println("-----");
+
+			} else {
+				System.out.println("Tipo não encontrado");
+			}
 
 		}
 
