@@ -7,12 +7,12 @@ public abstract class Animal {
 	}
 
 	public void dizerMeuNome() {
-		System.out.println("Meu nome eh animal");
+		System.out.println("Meu nome eh: " + getNome());
 
 	}
 
 	public void dizerMinhaIdade() {
-		System.out.println("Minha idade eh: ");
+		System.out.println("Minha idade eh: " + getIdade());
 	}
 
 	private String cor = "preto";
