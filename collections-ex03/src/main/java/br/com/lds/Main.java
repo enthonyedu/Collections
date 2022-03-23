@@ -15,6 +15,10 @@ public class Main {
 
 	private void start() {
 
+	}
+
+	private void exemploDaAula() {
+
 		Animal cachorro = new Cachorro("Tiburssinho");
 		Animal gato = new Gato();
 		Cachorro segundoCachorro = new Cachorro("Aroldo");
@@ -22,6 +26,8 @@ public class Main {
 		cachorro.som();
 		cachorro.dizerMeuNome();
 		cachorro.dizerMinhaIdade();
+
+		((Cachorro) cachorro).oQueGostoDeFazer();
 
 		System.out.println("-----");
 
@@ -34,7 +40,7 @@ public class Main {
 		gato.dizerMinhaIdade();
 		System.out.println("Cor do primeiro gato: " + gato.getCor());
 
-		Animal segundoGato = new Gato("Azul");
+		Animal segundoGato = new Gato("vermelho");
 		System.out.println("Cor do segundo gato: " + segundoGato.getCor());
 
 	}
